@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+body{
+    font-family: "Open Sans", sans-serif;
+    color:#fff;
+    margin: 0px;
+}
+
+.footer-container{
+ background-color: #004A99;
+ display:flex;
+ justify-content: space-between;
+}
+
+.wayne{
+    font-family: 'Montserrat', sans-serif;
+    font-size:13px;
+    width: 40%;
+    padding-left: 45px;
+    margin:15px;
+    line-height: 0.75cm;
+}
+
+.wayne h2{
+    font-size: 34px;
+}
+
+.useful-links{
+    width: 15%;
+    line-height: 1cm;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+
+.contact-us{
+    width: 20%;
+    line-height: 0.75cm;
+}
+
+.newsletter{
+    width: 25%;
+    line-height: 0.5cm;
+}
+
+.useful-links, .contact-us, .newsletter{
+    font-size:14px;
+    margin:15px;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+
+.copyright{
+    height:100px;
+    background-color:#00428a;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;    
+}
+
+.copyright p{
+    margin:5px;
+}
+
+.submit{
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 3px 5px;
+    margin:0;
+}
+
+input{
+    margin:0;
+}
