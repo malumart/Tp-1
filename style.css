@@ -6,6 +6,18 @@ body{
     color:#fff;
     margin: 0px;
 }
+.arrow {
+    position: fixed;
+    top:300px;
+    left: 1250px;
+    background-color: #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .footer-container{
  background-color: #004A99;
@@ -36,12 +48,22 @@ ul {
     margin: 0;
     padding:0;
 }
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s;
+}
+ul li a:hover {
+    color: #0564CA;
+}
 
 .contact-us{
     width: 20%;
     line-height: 0.75cm;
 }
-
+.contact-us span{
+    font-weight: bold;
+}
 .newsletter{
     width: 25%;
     line-height: 0.5cm;
@@ -71,11 +93,35 @@ ul {
 .submit{
     background-color: #007bff;
     color: #ffffff;
-    border: none;
-    padding: 3px 5px;
-    margin:0;
+    width: 30%;
+
+}
+.submit:hover {
+    cursor: pointer;
+    background-color: #0564CA;
 }
 
 input{
     margin:0;
+    border: none;
+    padding: 3px 5px;
+}
+.icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.iconos {
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+
+}
+.iconos:hover {
+    background-color: #0564ca;
 }
