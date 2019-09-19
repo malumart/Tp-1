@@ -54,7 +54,6 @@ h4 {
 }
 
 .useful-links{
-    line-height: 1cm;
     width: 30%;
 }
 
@@ -63,6 +62,7 @@ ul {
     list-style: none;
     margin: 0;
     padding:0;
+    line-height: 1cm;
 }
 
 ul li a {
@@ -76,8 +76,11 @@ ul li a:hover {
 }
 
 .contact-us{
-    line-height: 0.75cm;
     width: 40%;
+}
+
+p {
+    line-height: 0.75cm;
 }
 
 .contact-us span{
@@ -106,14 +109,22 @@ ul li a:hover {
 }
 
 .newsletter{
-    line-height: 0.5cm;
     width: 60%;
 }
 
+.newsletter p {
+    line-height: 0.5cm;
+}
+
+form {
+    display: flex;
+}
+
 input{
-    margin:0;
+    height: 25px;
+    margin: 0;
+    padding: 0;
     border: none;
-    padding: 3px 5px;
 }
 
 .submit{
@@ -147,22 +158,70 @@ input{
 }
 
 @media(max-width:900px){
-    .bloque1, .bloque2 {
+    .footer-container {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
+        flex-direction: column;
+        justify-content: center;
     }
 
+    .bloque1, .bloque2 {
+        display: flex;
+        justify-content: space-around;
+        justify-content: flex-start;
+
+    }
+
+    .bloque1 {
+        margin-bottom: 20px;
+    }
+
+    .wayne {
+        padding: 0;
+        margin-right: 20px;
+    }
+
+    .wayne h2 {
+        margin-top: 0;
+    }
+
+    .wayne, .useful-links, .contact-us,  .newsletter {
+        width: 50%;
+    }
+
+    .icons {
+        width: 60%;
+    }
+
+    .contact-us, .useful-links, .newsletter {
+        padding-left: 0;
+    }
 }
 
 @media(max-width:600px){
     .footer-container, .bloque1, .bloque2 {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
+    }
+
+    .wayne, .useful-links, .contact-us, .newsletter {
+        margin-bottom: 20px;
     }
 
     .wayne {
         margin-left: 0;
+    }
+
+    .newsletter {
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .icons {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
     }
 }
