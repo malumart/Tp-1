@@ -1,15 +1,4 @@
-/* Observaciones generales sobre el maquetado
-- El ultimo div ("our newsletter") deberia ser un poco mas angosto. 
-El input deberia ir en la misma linea que los iconos del div anterior. 
-Una posible solucion seria volverlo flex, con flex 1 y flex-direction: column 
-- Atencion a la altura y al ancho del input. Esta bastante mas chico que en el modelo. 
-- Si le quitamos el width del 40% al div "contact us" (y reemplazarlo por una medida absoluta, como 250px), 
-ya no tenemos el problema de que los iconos se achiquen y pierdan la forma circular
-- Atencion al ancho de los elementos en resoluciones menores a 600px: deberian ocupar todo el ancho de la pantalla, tanto los divs contenedores como el input por ejemplo
-- El submit deberia tener un transition 0.3s como los demas links */
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
 
 body{
     font-family: "Open Sans", sans-serif;
@@ -18,15 +7,16 @@ body{
 }
 
 .arrow {
+    border: none;
+    color: white;
+    font-size: 16px;
     position: fixed;
-    top:300px;
-    left: 1250px;
-    /* como la flecha esta posicionada 1250px a la izquierda, desaparece en resoluciones menores a 1250
-    Una mejor solucion seria darle un position "right: 50px", lo que permitiria que aparezca en toda resolucion */
+    bottom: 15px;
+    right: 15px;
     background-color: #007bff;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,15 +29,11 @@ body{
 .footer-container{
  background-color: #004A99;
  display:flex;
- justify-content: space-between;
- /* este space between no hace ningun cambio, por lo que no deberia estar */
- padding: 35px;
+ padding: 50px;
 }
 
 .bloque1, .bloque2 {
     display: flex;
-    justify-content: space-around;
-     /* este space around no hace ningun cambio, por lo que no deberia estar */
 }
 
 .wayne{
@@ -63,14 +49,9 @@ body{
     font-size: 34px;
 }
 
-h4 {
-    margin: 0 0 20px 0;
-}
-
 .useful-links{
     width: 30%;
 }
-
 
 ul {
     list-style: none;
@@ -90,7 +71,7 @@ ul li a:hover {
 }
 
 .contact-us{
-    width: 40%;
+    width: 250px;
 }
 
 p {
@@ -123,11 +104,14 @@ p {
 }
 
 .newsletter{
-    width: 60%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .newsletter p {
-    line-height: 0.5cm;
+    margin-top: 0;
 }
 
 form {
@@ -135,7 +119,10 @@ form {
 }
 
 input{
-    height: 25px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    height: 30px;
     margin: 0;
     padding: 0;
     border: none;
@@ -145,6 +132,7 @@ input{
     background-color: #007bff;
     color: #ffffff;
     width: 30%;
+    transition: all 0.3s;
 }
 
 .submit:hover {
@@ -180,10 +168,6 @@ input{
 
     .bloque1, .bloque2 {
         display: flex;
-        justify-content: space-around;
-        justify-content: flex-start;
-        /* estos dos justify content se anulan. ademas, ambos son innecesarios: space-around ya esta declarado mas arriba (y no tenia ninguna consecuencia), flex start es innecesario */
-
     }
 
     .bloque1 {
@@ -204,7 +188,7 @@ input{
     }
 
     .icons {
-        width: 60%;
+        width: 100%;
     }
 
     .contact-us, .useful-links, .newsletter {
@@ -213,8 +197,6 @@ input{
 }
 
 @media(max-width:600px){
-    /* como "wayne" tiene un width del 50% heredado de la media query de 900px, aqui se ve un poco mas pequeño que en el modelo. 
-    deberia tener un width del 100% en esta media query */
     .footer-container, .bloque1, .bloque2 {
         display: flex;
         flex-direction: column;
@@ -226,6 +208,7 @@ input{
     }
 
     .wayne {
+        width: 100%;
         margin-left: 0;
     }
 
@@ -240,7 +223,4 @@ input{
 
     form {
         width: 100%;
-        /* form ocupa el 100% de la pantalla, pero sus elementos no, porque tienden a ocupar el menor espacio posible al ser elementos flex. 
-        Podemos solucionarlo dandole flex 2 al input type email y flex 1 al input type submit */
-    }
 }
